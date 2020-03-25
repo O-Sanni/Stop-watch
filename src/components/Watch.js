@@ -8,7 +8,7 @@ class Watch extends React.Component{
     constructor(){
         super();
         this.state={min: 0,
-        seconds:50};
+        seconds:50, countPause:1};
     }
     getMin=()=>{
 
@@ -31,8 +31,13 @@ class Watch extends React.Component{
     }
     
     pauseClick=()=>{
+        this.setState({countPause: (this.state.countPause+1)});
+        if(this.state.countPause%2===0){
+            this.startClick();
+        }
+        else{
+      clearInterval(this.inter);}
 
-      clearInterval(this.interval);
      }
     
     render(){
