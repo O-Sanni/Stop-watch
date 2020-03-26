@@ -6,7 +6,7 @@ class PauseButton extends React.Component{
     {
         return(
                 <button className="buttons" onClick={this.props.onClick}>
-                    Pause!
+                    Pause
                 </button>
         )
     }

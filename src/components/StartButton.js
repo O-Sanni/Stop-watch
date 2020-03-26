@@ -7,7 +7,7 @@ class StartButton extends React.Component{
     {
         return(
                 <button className="buttons" onClick={this.props.onClick}>
-                    Start!
+                    Start
                 </button>
         )
     }

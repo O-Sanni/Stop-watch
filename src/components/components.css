@@ -11,13 +11,13 @@
 }
 #timerParagraph{
     margin-top: 200px;
-    margin-bottom: 50px;
     font-size: 35px;
     font-family: 'El Messiri', sans-serif;
     color: rgb(66, 34, 7);
 }
 #timer{
-    margin-bottom: 30px;
+    margin-top: -35px;
+    margin-bottom: 25px;
     font-size: 35px;
     font-family: 'El Messiri', sans-serif;
     color:rgb(66, 34, 7);
