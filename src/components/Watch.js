@@ -9,7 +9,7 @@ class Watch extends React.Component{
     constructor(){
         super(); 
         //make the states default minutes is set to 0, seconds to 0 and count for pause to 0
-        this.state={hours:0, minutes:59,
+        this.state={hours:0, minutes:0,
         seconds:0, countPause:0, start:false };
     }
 
