@@ -1,5 +1,7 @@
 # This is a stopwatch program 
+
 ## Prototype:
+
 created three separate button js files: restart, start and pause;
 then create watch js file; this file will render three buttons js files;
 watch.js will have constractor, function for start stopwatch , pause stopwatch and restart stopwatch;
