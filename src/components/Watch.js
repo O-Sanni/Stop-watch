@@ -49,7 +49,8 @@ class Watch extends React.Component{
         
         return (
             <div>
-                <p id="timerParagraph">Timer: {this.state.min}:{this.state.seconds}</p>
+                <p id="timerParagraph">Timer:</p>
+                 <p id="timer">Minutes: {this.state.min} Seconds: {this.state.seconds} </p>
                 <StartButton onClick={this.startClick} />
                 <PauseButton onClick={this.pauseClick} />
                 <RestartButton onClick={this.restartClick} />

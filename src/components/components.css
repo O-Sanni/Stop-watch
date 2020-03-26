@@ -3,10 +3,22 @@
     height: 50px;
     margin-left: 10px;
     border-radius: 35%;
+    font-size: 25px;
+    font-family: 'El Messiri', sans-serif;
+    color: rgb(66, 34, 7);
+    background-color: rgba(214, 159, 9, 0);
+    border-color: rgb(71, 30, 1);
 }
 #timerParagraph{
- margin-top: 300px;
- margin-bottom: 50px;
- font-size: 35px;
- color: purple;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-family: 'El Messiri', sans-serif;
+    color: rgb(66, 34, 7);
+}
+#timer{
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-family: 'El Messiri', sans-serif;
+    color:rgb(66, 34, 7);
 }
