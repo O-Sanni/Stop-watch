@@ -6,9 +6,9 @@ class StartButton extends React.Component{
     render()
     {
         return(
-                <button className="buttons" onClick={this.props.onClick}>
-                    Start
-                </button>
+            <button className="buttons" onClick={this.props.onClick}>
+                Start
+            </button>
         )
     }
 }
