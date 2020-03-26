@@ -1,10 +1,11 @@
 import React from 'react';
+import './components.css';
 
 class PauseButton extends React.Component{
     render()
     {
         return(
-                <button onClick={this.props.onClick}>
+                <button className="buttons" onClick={this.props.onClick}>
                     Pause!
                 </button>
         )

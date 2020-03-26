@@ -2,6 +2,7 @@ import React from "react";
 import RestartButton from "./RestartButton";
 import StartButton from "./StartButton";
 import PauseButton from "./PauseButton";
+import './components.css';
 
 
 class Watch extends React.Component{
@@ -9,13 +10,12 @@ class Watch extends React.Component{
         super(); 
         //make the states default minutes is set to 0, seconds to 0 and count for pause to 0
         this.state={min:0,
-        seconds:0, countPause:0, countStart:1, start:false };
+        seconds:0, countPause:0, start:false };
     }
-   
+
     startClick =()=>{ //function which called by pressing Start button
-        
         //this.inter will use setInterval to give new values to state every 1000 m.second
-        if(this.state.countStart===1){
+
         this.inter=setInterval(()=>{
             this.setState({ //set state values
                 seconds:(this.state.seconds +1), //will add 1 to seconds every 1000 m.s
@@ -24,22 +24,20 @@ class Watch extends React.Component{
                 this.setState({seconds: 0, //seconds will be set to 0
                 min: this.state.min +1}); // and minutes will increase by 1
             }
-        },1000); 
-     }
-     this.setState({start:true, countStart:this.state.countStart+1}); //set countStart to true and add 1 to countStart
+        },1000);
+        this.setState({start:true}); //set countStart to true
     }
      //by pressing restart button state will be updated to original state which was 0's
     restartClick=()=>{ 
      this.setState({min: 0,
-        seconds:0, countPause:0, countStart:1, start:false });
+        seconds:0, countPause:0, start:false, repeat:0 });
         clearInterval(this.inter); //clearInterval to stop the setInterval()
     }
     // by pressing Pause we updating countPause by adding 1
     pauseClick=()=>{
         if(this.state.start===true){
         this.setState({countPause: (this.state.countPause+1)});
-        if(this.state.countPause%2!=0){ //if countPause not divisiable by 2 we call startClick function to continue setInterval
-            this.setState({countStart:1})
+        if(this.state.countPause%2!==0){ //if countPause not divisiable by 2 we call startClick function to continue setInterval
             this.startClick();
         }
         else{ //if countPause divisiable by 2 we use clearInterval to stop the setInterval()
@@ -51,7 +49,7 @@ class Watch extends React.Component{
         
         return (
             <div>
-                <p>Timer:{this.state.min}:{this.state.seconds}</p>
+                <p id="timerParagraph">Timer: {this.state.min}:{this.state.seconds}</p>
                 <StartButton onClick={this.startClick} />
                 <PauseButton onClick={this.pauseClick} />
                 <RestartButton onClick={this.restartClick} />
